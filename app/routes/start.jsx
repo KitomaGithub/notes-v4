@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Welcome } from "../welcome/welcome";
 import { useNavigate } from "react-router";
 
 export function meta() {
@@ -15,5 +14,5 @@ export default function Home() {
         navigate("/login");
     }, [])
 
-  return <Welcome />;
+  return (<></>);
 }
