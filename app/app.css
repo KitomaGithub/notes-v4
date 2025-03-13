@@ -1,8 +1,10 @@
+@import "@flaticon/flaticon-uicons/css/all/all";
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-netotakugreen-100: #F2FAC6;
   --color-netotakugreen-500: #ABEB52;
   --color-netotakupurple-100: #FAECFD;
   --color-netotakupurple-200: #F0C9F9;
@@ -11,4 +13,20 @@
 
 .textured-bg {
   background-image: url(pages/assets/image/textured-bg.jpg);
+}
+
+.masonry {
+  column-gap: 1.5em;
+  column-count: 1;
+}
+.masonry-sm {
+  column-gap: 1.5em;
+  column-count: 2;
+}
+.masonry-md {
+  column-gap: 1.5em;
+  column-count: 3;
+}
+.break-inside {
+  break-inside: avoid;
 }

@@ -1,5 +1,4 @@
-import { index, route } from "@react-router/dev/routes";
-import { Link } from "react-router";
+import { index, layout, route } from "@react-router/dev/routes";
 
 export default [
     index("routes/start.jsx"),
@@ -7,4 +6,7 @@ export default [
     route("test", "routes/test.jsx", [
         route(":testId", "routes/testDynamic.jsx")
     ]),
+    layout("layouts/notes/index.jsx", [
+        route("/notes", "routes/notes.jsx")
+    ])
 ];

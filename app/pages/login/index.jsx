@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import logo from "../../assets/image/logo.png"
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 import { useState } from "react";
 
 export default function LoginPage(){
+    const nav = useNavigate();
+
     const [isAnimate, setIsAnimate] = useState(false);
 
     const btn_class = classNames(
@@ -17,12 +19,13 @@ export default function LoginPage(){
     function animate_button(){
         setIsAnimate(true)
         setTimeout(() => {
-            setIsAnimate(false)
+            nav("/notes");
+            setIsAnimate(false);
         }, 500)
     }
 
     return(
-        <div className="bg-[url(assets/image/textured-bg.jpg)] bg-contain bg-fixed bg- w-dvw h-dvh">
+        <div className="bg-[url(assets/image/textured-bg.jpg)] bg-contain bg-fixed w-dvw h-dvh">
             <div className="bg-gradient-to-b from-0% to-93% to-netotakugreen-500/50 from-transparent w-full h-full flex justify-center items-center">
                 <div className="border-2 border-gray-500 bg-white pb-10 px-15 rounded-lg h-fit gap-4 flex flex-col items-center shadow-md shadow-netotakupurple-500">
                     <img src={logo} className="max-w-64"/>
